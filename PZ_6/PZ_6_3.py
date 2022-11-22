@@ -1,8 +1,12 @@
 # обнулить элементы списка, располож. между его мин. и макс. элементами
 from random import randint
+try:
+    n = int(input("Введите размер списка: "))
+    b = int(input("Введите любое целочисленное число: "))
+except ValueError:
+    print('error')
 
-n = int(input("Введите размер списка: ")) # try-except
-b = int(input("Введите любое целочисленное число: "))
+
 
 lst = [randint(0, b) for x in range(n)]
 indx_max = lst.index(max(lst))
