@@ -2,13 +2,13 @@
 from random import randint
 try:
     n = int(input("Введите размер списка: "))
-    b = int(input("Введите любое целочисленное число: "))
+    t = int(input("Введите любое целочисленное число: "))
 except ValueError:
     print('error')
 
 
 
-lst = [randint(0, b) for x in range(n)]
+lst = [randint(0, t) for x in range(n)]
 indx_max = lst.index(max(lst))
 indx_min = lst.index(min(lst))
 print(lst)

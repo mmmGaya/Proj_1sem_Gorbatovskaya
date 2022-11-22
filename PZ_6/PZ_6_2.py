@@ -6,8 +6,8 @@ try:
     b = int(input("Введите любое целочисленное число: "))
 except ValueError:
     print('error')
-lst = [randint(0, b) for x in range(n)]
 
+lst = [randint(0, b) for x in range(n)]
 lst_indx = []
 
 for i, x in enumerate(lst):
