@@ -3,15 +3,19 @@ st = input('Введите строку: ')
 if st.find('(') == -1:
     raise ValueError('Строка должна содеожать хотя бы одну круглую скобку')
 
-co = st.count('(')
-cc = st.count(')')
-if co == cc:
-    print(0)
-elif co > cc:
-    print(1)
-else:
-    print(st.rfind(')'))
+c = 0
+for i in st:
+  if i == '(':
+    c += 1
+  elif i == ')':
+    c -= 1
+  else:
+    c += 0
 
+if c > 0:
+  print(1)
+else:
+  print(c) # индексы выводяться с конца
 
 
 
